@@ -18,6 +18,14 @@ form.addEventListener("submit", function (event) {
     return;
   }
 
+  if (Number.isInteger(altura)) {
+    setResultado(
+      "Altura inválida, tente utilizar '. ou ,', exemplo: 1.45",
+      false
+    );
+    return;
+  }
+
   const imc = getIMC(peso, altura);
   const NivelImc = getNivelImc(imc);
 
